@@ -26,13 +26,9 @@ class HomePage extends StatelessWidget {
                     //ExercisesWidget(),
                   ],
                 ),
-
               ),
-
-
               new Container(
                 child: work_plan(),
-
               ),
               new Container(
                 color: Colors.lightGreen,
@@ -46,14 +42,16 @@ class HomePage extends StatelessWidget {
             tabs: [
               Tab(
                 icon: new Icon(Icons.stacked_line_chart),
-                ),
+              ),
               Tab(
                 icon: new Icon(Icons.rss_feed),
               ),
               Tab(
                 icon: new Icon(Icons.perm_identity),
               ),
-              Tab(icon: new Icon(Icons.settings),)
+              Tab(
+                icon: new Icon(Icons.settings),
+              )
             ],
             //kun indicator farver til bunden
             labelColor: Color(0xFFB4003B),
@@ -68,18 +66,17 @@ class HomePage extends StatelessWidget {
     );
   }
 
-
   SliverAppBar buildAppBar(BuildContext context) => SliverAppBar(
-    flexibleSpace: FlexibleSpaceBar(background: LineChartWidget()),
-    expandedHeight: MediaQuery.of(context).size.height * 0.5,
-    stretch: true,
-    title: Text('Volume'),
-    centerTitle: true,
-    pinned: true,
-    leading: Icon(Icons.menu),
-    actions: [
-      Icon(Icons.person, size: 28),
-      SizedBox(width: 12),
-    ],
-  );
+        flexibleSpace: FlexibleSpaceBar(background: LineChartWidget()),
+        expandedHeight: MediaQuery.of(context).size.height * 0.5,
+        stretch: true,
+        title: Text('Volume'),
+        centerTitle: true,
+        pinned: true,
+        leading: Icon(Icons.menu),
+        actions: [
+          Icon(Icons.person, size: 28),
+          SizedBox(width: 12),
+        ],
+      );
 }
